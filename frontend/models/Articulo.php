@@ -29,6 +29,7 @@ use Yii;
  */
 class Articulo extends \yii\db\ActiveRecord
 {
+    public $fechaCreacion;
     /**
      * @inheritdoc
      */
@@ -67,6 +68,7 @@ class Articulo extends \yii\db\ActiveRecord
             'puntaje_articulo' => 'Puntaje Articulo',
             'ciudad' => 'Ciudad',
             'fecha_creacion' => 'Fecha Creacion',
+    
             'fehca_revision' => 'Fehca Revision',
             'fecha_publicacion' => 'Fecha Publicacion',
             'id_escuela' => 'Id Escuela',
