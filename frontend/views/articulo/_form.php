@@ -28,18 +28,23 @@ use kartik\date\DatePicker;
 
     <?= $form->field($model, 'ciudad')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'fecha_creacion')->textInput(['value'=> date('d-m-y'), 'disabled'=>true]) ?>
+    <?= $form->field($model, 'fechaCreacion')->textInput(['disabled'=>true,'value'=> date('Y-m-d')]) ?>
+
+  <?= $form->field($model, 'fecha_creacion')->label(false)->textInput(['class'=>'hide','value'=> date('Y-m-d')]) ?>
+
 
 
     <?php
         echo '<label class="control-label">Fecha de Revisión</label>';
         echo DatePicker::widget([
-            'name' => $form->field($model, 'fehca_revision'),
+            'name' =>  'fehca_revision',
+            'model' => $model,
+            'attribute' => 'fehca_revision',
             'type' => DatePicker::TYPE_COMPONENT_APPEND,
             'value' => '',
             'pluginOptions' => [
                 'autoclose'=>true,
-                'format' => 'dd-M-yyyy'
+                'format' => 'yyyy-m-dd'
             ]
         ]);
 
@@ -48,12 +53,15 @@ use kartik\date\DatePicker;
 <?php
     echo '<label class="control-label">Fecha de Publicación</label>';
     echo DatePicker::widget([
-        'name' => $form->field($model, 'fecha_publicacion'),
+        'name' => 'fecha_publicacion',
+        'model' => $model,
+        'attribute' => 'fecha_publicacion',
+
         'type' => DatePicker::TYPE_COMPONENT_APPEND,
         'value' => '',
         'pluginOptions' => [
             'autoclose'=>true,
-            'format' => 'dd-M-yyyy'
+            'format' => 'yyyy-m-dd'
         ]
     ]);
 
