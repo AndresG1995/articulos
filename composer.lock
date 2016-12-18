@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b7f03bbd004c82eaea85fd3ff3aecad6",
-    "content-hash": "93fcb8c84212be43df94613f83f3280b",
+    "hash": "259e433cd34dd2ec2ccce6f77b4e917b",
+    "content-hash": "87e26ef4f11a2dd462b42715a18f7fbe",
     "packages": [
         {
             "name": "2amigos/yii2-chartjs-widget",
@@ -361,6 +361,29 @@
             }
         },
         {
+            "name": "bower-asset/select2",
+            "version": "4.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/select2/select2.git",
+                "reference": "566c7846fbf8c3b7674346f26d0ee872c0a77629"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/select2/select2/zipball/566c7846fbf8c3b7674346f26d0ee872c0a77629",
+                "reference": "566c7846fbf8c3b7674346f26d0ee872c0a77629",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "dist/js/select2.js",
+                    "src/scss/core.scss"
+                ]
+            },
+            "description": "Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results."
+        },
+        {
             "name": "bower-asset/typeahead.js",
             "version": "v0.11.1",
             "source": {
@@ -591,6 +614,52 @@
                 "yii2-user"
             ],
             "time": "2016-08-13 15:45:38"
+        },
+        {
+            "name": "enigmatix/yii2-select",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/enigmatix/yii2-select2.git",
+                "reference": "34d5de7cb3a5d3af44ce10dc0b99ab2783d62806"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/enigmatix/yii2-select2/zipball/34d5de7cb3a5d3af44ce10dc0b99ab2783d62806",
+                "reference": "34d5de7cb3a5d3af44ce10dc0b99ab2783d62806",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/select2": "4.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "enigmatix\\yii2select\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joel Small",
+                    "email": "joel.small@biscon.com.au"
+                }
+            ],
+            "description": "Yii2 wrapper for the Select2 javascript widget",
+            "keywords": [
+                "activefield",
+                "activeform",
+                "form",
+                "framework",
+                "select2",
+                "widget",
+                "yii2"
+            ],
+            "time": "2016-09-09 07:58:48"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -1124,16 +1193,16 @@
         },
         {
             "name": "kartik-v/yii2-widget-select2",
-            "version": "v2.0.8",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-widget-select2.git",
-                "reference": "4d03239c1e28ef8d3b96ab7fe360f5cbda34fb69"
+                "reference": "7deb625a37f7f13a77a697a8367e2e44e2462d7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-select2/zipball/4d03239c1e28ef8d3b96ab7fe360f5cbda34fb69",
-                "reference": "4d03239c1e28ef8d3b96ab7fe360f5cbda34fb69",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-select2/zipball/7deb625a37f7f13a77a697a8367e2e44e2462d7e",
+                "reference": "7deb625a37f7f13a77a697a8367e2e44e2462d7e",
                 "shasum": ""
             },
             "require": {
@@ -1173,7 +1242,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2016-02-17 11:49:30"
+            "time": "2016-11-17 09:07:14"
         },
         {
             "name": "phpspec/php-diff",
@@ -1795,6 +1864,7 @@
                 "codeception",
                 "yii2"
             ],
+            "abandoned": "codeception/codeception",
             "time": "2016-03-17 03:41:26"
         },
         {
@@ -1849,7 +1919,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "dektrium/yii2-user": 20,
-        "dektrium/yii2-rbac": 20
+        "dektrium/yii2-rbac": 20,
+        "kartik-v/yii2-widget-select2": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
