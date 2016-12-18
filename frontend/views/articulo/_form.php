@@ -8,6 +8,7 @@ use frontend\models\Estados;
 use frontend\models\Escuelas;
 use frontend\models\Categoria;
 use yii\helpers\ArrayHelper;
+use kartik\date\DatePicker;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Articulo */
 /* @var $form yii\widgets\ActiveForm */
@@ -27,19 +28,29 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'ciudad')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'fecha_creacion')->textInput() ?>
+    <?= $form->field($model, 'fecha_creacion')->textInput(['value'=> date('d-m-y'), 'disabled'=>true]) ?>
 
-    <?= $form->field($model, 'fehca_revision')->textInput() ?>
 
-    <?= $form->field($model, 'fecha_publicacion')->textInput() ?>
+    <?php
+        echo '<label class="control-label">Fecha de Revisión</label>';
+        echo DatePicker::widget([
+            'name' => $form->field($model, 'fehca_revision'),
+            'type' => DatePicker::TYPE_COMPONENT_APPEND,
+            'value' => '',
+            'pluginOptions' => [
+                'autoclose'=>true,
+                'format' => 'dd-M-yyyy'
+            ]
+        ]);
 
+    ?>
 
 <?php
-    echo '<label class="control-label">Birth Date</label>';
+    echo '<label class="control-label">Fecha de Publicación</label>';
     echo DatePicker::widget([
-        'name' => 'dp_3',
+        'name' => $form->field($model, 'fecha_publicacion'),
         'type' => DatePicker::TYPE_COMPONENT_APPEND,
-        'value' => '23-Feb-1982',
+        'value' => '',
         'pluginOptions' => [
             'autoclose'=>true,
             'format' => 'dd-M-yyyy'
